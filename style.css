@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+    font-family: 'Montserrat', sans-serif;
+}
+
+section{
+    padding: 5rem;
+}
+
+.header {
+    background-image: url("https://uwaterloo.ca/stratford-campus-newsletter/sites/ca.stratford-campus-newsletter/files/uploads/images/new_campus_photos_edited.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 80vh;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: left;
+}
+
+.header h1 {
+    font-size: 4rem;
+}
+
+.header>* {
+    z-index: 1;
+    font-size: 1.3rem;
+}
+
+.header-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(270deg, #ec3237aa, #d31e53ee);
+    z-index: 0;
+}
+
+.header-logo {
+    height: 5rem;
+    width: fit-content;
+
+}
+
+.header .courtesy {
+    position: absolute;
+    background: black;
+    font-size: 0.8rem;
+    bottom: 0;
+    right: 0;
+    padding: 5px 10px;
+}
+
+.places {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+}
+
+.card-image {
+    position: relative;
+    height: 40vh;
+}
+
+.card-image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-text {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.card-text p {
+    font-size: 80%;
+    padding-top: 10px;
+}
+
+.header-text {
+    width: fit-content;
+    max-width: 600px;
+}
+
+.card-content {
+    padding: 20px;
+    padding-top: 0;
+}
+
+.card>h3 {
+    padding: 20px;
+    /* text-align: center; */
+    display: inline-block;
+}
+
+.maps-button {
+    font-size: 80%;
+    padding: 5px 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .1);
+
+}
+
+@media screen and (max-width: 1000px) {
+    .places {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    section{
+        padding:2rem 4rem ;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header-text{
+        font-size: 1.1rem;
+    }
+
+    .places {
+        grid-template-columns: 1fr;
+    }
+}
